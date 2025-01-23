@@ -5,7 +5,7 @@ AUTH_EMAIL = "email@email.com"
 AUTH_KEY = "your_auth_key_here"
 ACCOUNT_ID = "Cloudflare Account ID"
 BASE_URL = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}"
-import requests
+
 
 def search_user_by_email(email):
     """Search for a Cloudflare Zero Trust user by email."""
