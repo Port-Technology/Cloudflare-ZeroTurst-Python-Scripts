@@ -1,10 +1,10 @@
 from flask import Flask, render_template, request, jsonify
-import requests
+import requests, os
 
 # Replace these with your actual Cloudflare API credentials
-AUTH_EMAIL = "EMAIL_ADDRESS"
-AUTH_KEY = "AUTHKEY"
-ACCOUNT_ID = "ACCOUNT_ID"
+AUTH_EMAIL = os.environ.get("CF-email")
+AUTH_KEY = os.environ.get("CF-key")
+ACCOUNT_ID = os.environ.get("CF-Account")
 BASE_URL = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}"
 
 app = Flask(__name__)
